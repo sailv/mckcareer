@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>McKesson Careers</title>
+	<meta name="description" content="McKesson Career Search App">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/client.js"></script>
+</head>
+<body>
+<div class="container">
+
+	<center><a href="http://www.mckesson.com">
+		<img src="/images/mckesson-logo.png" alt="McKesson Logo">
+	</a></center>
+	<hr>
+	<div class="row">
+		<div class="col-xs-10">
+			<input id="keyword" class="ui-autocomplete-input" placeholder="Enter search keyword"/>
+		</div>
+		<div class="col-xs-2">
+			<button id="search" onclick="GetMatchingJobs()" class="search-button"></button>
+		</div>
+	</div>
+</div>	
+<div class="container" id="matches">
+	 <p>Matching Jobs</p>
+	<div class="list-group" id="joblist">
+	</div>
+	
+    <footer>
+     <div><center>
+          <h4>Connect with McKesson</h4>
+          <a href="javascript:window.open('https://www.facebook.com/McKessonCorporation');void(0);" title="Facebook" shape="rect"><img src="images/facebook-icon-20px.jpg" alt="Facebook from footer"></a>
+		  <a href="javascript:window.open('https://twitter.com/McKessonjobs');void(0);" title="Twitter" shape="rect"><img src="images/twitter-icon-20px.jpg" alt="Twitter from footer"></a>
+		  <a href="javascript:window.open('http://www.linkedin.com/company/mckesson');void(0);" title="LinkedIn" shape="rect"><img src="images/linkedin-icon-20px.jpg" alt="LinkedIn from footer"></a>
+		  <a href="javascript:window.open('https://plus.google.com/117789480217259405059/posts');void(0);" title="GooglePlus" shape="rect"><img src="images/google-icon-20px.jpg" alt="GooglePlus from footer"></a>
+		  <a href="javascript:window.open('http://www.youtube.com/user/McKessonCorporation');void(0);" title="YouTube" shape="rect"><img src="images/youtube-icon-20px.jpg" alt="YouTube from footer"></a>
+		  <a href="javascript:window.open('https://www.glassdoor.com/Overview/Working-at-McKesson-EI_IE434.11,19.htm');void(0);" title="Glassdoor" shape="rect"><img src="images/glass-icon-20px.jpg" alt="Glassddor footer"></a>
+		</center>
+      </div>
+    </footer>
+</div>
+
+</body>
+</html>

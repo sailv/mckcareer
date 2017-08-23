@@ -1,0 +1,75 @@
+{
+    "multilineEnabled": false,
+    "sortingSelection": {
+        "sortBySelectionParam": "3",
+        "ascendingSortingOrder": "false"
+    },
+    "fieldData": {
+        "fields": {
+            "KEYWORD": "analyst",
+            "LOCATION": ""
+        },
+        "valid": true
+    },
+    "filterSelectionParam": {
+        "searchFilterSelections": [
+            {
+                "id": "POSTING_DATE",
+                "selectedValues": []
+            },
+            {
+                "id": "ORGANIZATION",
+                "selectedValues": []
+            },
+            {
+                "id": "LOCATION",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_FIELD",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_SCHEDULE",
+                "selectedValues": []
+            }
+        ]
+    },
+    "advancedSearchFiltersSelectionParam": {
+        "searchFilterSelections": [
+            {
+                "id": "ORGANIZATION",
+                "selectedValues": []
+            },
+            {
+                "id": "LOCATION",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_FIELD",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_NUMBER",
+                "selectedValues": []
+            },
+            {
+                "id": "EMPLOYEE_STATUS",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_SCHEDULE",
+                "selectedValues": []
+            },
+            {
+                "id": "WILL_TRAVEL",
+                "selectedValues": []
+            },
+            {
+                "id": "JOB_SHIFT",
+                "selectedValues": []
+            }
+        ]
+    },
+    "pageNo": 1
+}
