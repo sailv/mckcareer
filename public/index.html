@@ -1,58 +1,109 @@
 <html>
-<head>
-	<title>McKesson Careers</title>
-	<meta name="description" content="McKesson Career Search App">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<title>jQuery.mhead demo</title>
 
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">	
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<script src="http://underscorejs.org/underscore-min.js"></script>
+		<script src="ext/jquery-3.2.1.min.js"></script>
 
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/client.js"></script>
-</head>
-<body>
-<div class="container">
+		<link rel="stylesheet" href="ext/jquery-ui-1.12.1/jquery-ui.css">	
+		<script src="ext/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
-	<center><a href="http://www.mckesson.com">
-		<img src="/images/mckesson-logo.png" alt="McKesson Logo">
-	</a></center>
-	<hr>
-	<div class="row">
-		<div class="col-xs-10">
-			<input id="keyword" class="ui-autocomplete-input" placeholder="Enter search keyword"/>
+		<link rel="stylesheet" href="ext/bootstrap-3.3.7/bootstrap.min.css">
+		<script src="ext/bootstrap-3.3.7/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="ext/jQuery.mmenu-6.1.4/jquery.mmenu.all.css">
+		<script type="text/javascript" src="ext/jQuery.mmenu-6.1.4/jquery.mmenu.all.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.mhead.css">
+		<script type="text/javascript" src="js/jquery.mhead.js"></script>
+		<script type="text/javascript" src="js/underscore-min.js"></script>
+		<script type="text/javascript" src="js/client.js"></script>
+
+		<style type="text/css">
+			.mh-head {
+				background: #4bb5ef;
+				color: #fff;
+			}
+			.mh-text {
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.mh-head .mh-form .fa {
+				color: #4bb5ef;
+			}
+		</style>
+
+		<script type="text/javascript">
+			$(function() {
+
+				//	create the menus
+				$('#menu').mmenu();
+
+				//	fire the plugin
+				$('.mh-head.first').mhead({
+					scroll: {
+						hide: 200
+					}
+				});
+				$('.mh-head.second').mhead({
+					scroll: false
+				});
+
+				//	for demo only
+				$('a[href^="#/"]').click(function() {
+					alert( 'Coming Soon' );
+					return;
+				})
+			});
+		</script>
+
+	</head>
+	<body>
+
+		<div id="page">
+
+			<div class="mh-head first Sticky">
+				<span class="mh-btns-left">
+					<a class="fa fa-bars" href="#menu"></a>
+				</span>
+				<span class="mh-text">demo</span>
+			</div>
+			<div class="mh-head second">
+				<form class="mh-form">
+					<input id="keyword" class="ui-autocomplete-input" placeholder="Enter search keyword"/>
+					<a href="#" onclick="GetMatchingJobs()" class="fa fa-search"></a>
+				</form>
+			</div>
+			<div class="list-group" id="joblist">
+			</div>
+
+			
+			<nav id="menu">
+				<ul>
+					<li><a href="#/">Home</a></li>
+					<li><span>About us</span>
+						<ul>
+							<li><a href="#/about/history">History</a></li>
+							<li><span>The team</span>
+								<ul>
+									<li><a href="#/about/team/management">Management</a></li>
+									<li><a href="#/about/team/sales">Sales</a></li>
+									<li><a href="#/about/team/development">Development</a></li>
+								</ul>
+							</li>
+							<li><a href="#/about/address">Our address</a></li>
+						</ul>
+					</li>
+					<li><a href="#/bot">Chat Bot</a></li>
+				</ul>
+			</nav>
 		</div>
-		<div class="col-xs-2">
-			<button id="search" onclick="GetMatchingJobs()" class="search-button"></button>
-		</div>
-	</div>
-</div>	
-<div class="container" id="matches">
-	 <p>Matching Jobs</p>
-	<div class="list-group" id="joblist">
-	</div>
-	
-    <footer>
-     <div><center>
-          <h4>Connect with McKesson</h4>
-          <a href="javascript:window.open('https://www.facebook.com/McKessonCorporation');void(0);" title="Facebook" shape="rect"><img src="images/facebook-icon-20px.jpg" alt="Facebook from footer"></a>
-		  <a href="javascript:window.open('https://twitter.com/McKessonjobs');void(0);" title="Twitter" shape="rect"><img src="images/twitter-icon-20px.jpg" alt="Twitter from footer"></a>
-		  <a href="javascript:window.open('http://www.linkedin.com/company/mckesson');void(0);" title="LinkedIn" shape="rect"><img src="images/linkedin-icon-20px.jpg" alt="LinkedIn from footer"></a>
-		  <a href="javascript:window.open('https://plus.google.com/117789480217259405059/posts');void(0);" title="GooglePlus" shape="rect"><img src="images/google-icon-20px.jpg" alt="GooglePlus from footer"></a>
-		  <a href="javascript:window.open('http://www.youtube.com/user/McKessonCorporation');void(0);" title="YouTube" shape="rect"><img src="images/youtube-icon-20px.jpg" alt="YouTube from footer"></a>
-		  <a href="javascript:window.open('https://www.glassdoor.com/Overview/Working-at-McKesson-EI_IE434.11,19.htm');void(0);" title="Glassdoor" shape="rect"><img src="images/glass-icon-20px.jpg" alt="Glassddor footer"></a>
-		</center>
-      </div>
-    </footer>
-</div>
-
-</body>
+	</body>
 </html>
