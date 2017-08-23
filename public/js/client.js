@@ -26,7 +26,7 @@ $(function() {
 
 	$('#keyword').autocomplete({
 		source: function (request, response) {
-			$.getJSON("http://localhost:90/keywords?filter=" + request.term, function (data) {
+			$.getJSON("/keywords?filter=" + request.term, function (data) {
 				response(data);
 			});
 		},
@@ -36,7 +36,7 @@ $(function() {
 	
 function GetMatchingJobs(){
     document.getElementById('joblist').innerHTML = "Searching, Please wait...";
-	var url= "http://localhost:90/jobs?filter=" + document.getElementById("keyword").value;
+	var url= "/jobs?filter=" + document.getElementById("keyword").value;
 	$.getJSON(url, function (data, status) {
 		var joblink="https://mckesson.taleo.net/careersection/ex/jobdetail.ftl?job="
         document.getElementById('joblist').innerHTML = "";
