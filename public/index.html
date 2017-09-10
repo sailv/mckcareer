@@ -4,7 +4,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>McKesson Career App</title>
+		<title>McKesson Careers</title>
 
 		<link rel="stylesheet" type="text/css" href="css/demo.css">
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico" />
@@ -56,8 +56,20 @@
 					scroll: false
 				});
 
+				$('a[href^="#/bot"]').click(function() {
+            window.open(
+              'http://zott.cloware.com/voiceui/setup/index3.php?a=1096',
+              '_blank' // open in a new window.
+            );
+          return;
+				})
 				//	for demo only
-				$('a[href^="#/"]').click(function() {
+				$('a[href="#/alert"]').click(function() {
+					alert( 'Alerts and Notifications are not part of Demo' );
+					return;
+				})
+				//	for demo only
+				$('a[href^="#/about"]').click(function() {
 					alert( 'Coming Soon' );
 					return;
 				})
@@ -68,12 +80,11 @@
 	<body>
 
 		<div id="page">
-
 			<div class="mh-head first Sticky">
 				<span class="mh-btns-left">
 					<a class="fa fa-bars" href="#menu"></a>
 				</span>
-				<span class="mh-text">McKesson Careers</span>
+				<span class="mh-text">Demo</span>
 			</div>
 			<div class="mh-head second">
 				<form class="mh-form">
@@ -84,10 +95,10 @@
 			<div class="list-group" id="joblist">
 			</div>
 
-			
 			<nav id="menu">
 				<ul>
-					<li><a href="#/">Home</a></li>
+					<li><a href="#/">Search</a></li>
+					<li><a href="#/alert">Set Job Alert</a></li>
 					<li><span>About us</span>
 						<ul>
 							<li><a href="#/about/history">History</a></li>
